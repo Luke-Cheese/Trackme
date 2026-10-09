@@ -1,7 +1,50 @@
+
 {
-  "expo":{"name":"MTB GPS Tracker Pro","slug":"mtb-gps-tracker-pro","version":"1.0.0","orientation":"portrait","userInterfaceStyle":"dark","newArchEnabled":true,
-    "ios":{"supportsTablet":false,"bundleIdentifier":"it.aquascan.mtbtracker","infoPlist":{"UIBackgroundModes":["location"],"NSLocationAlwaysAndWhenInUseUsageDescription":"La posizione serve per registrare la tua attività MTB anche in background.","NSLocationWhenInUseUsageDescription":"La posizione serve per registrare la tua attività MTB."}},
-    "android":{"package":"it.aquascan.mtbtracker","permissions":["ACCESS_COARSE_LOCATION","ACCESS_FINE_LOCATION","ACCESS_BACKGROUND_LOCATION","FOREGROUND_SERVICE","FOREGROUND_SERVICE_LOCATION"]},
-    "plugins":[["expo-location",{"locationWhenInUsePermission":"MTB GPS Tracker usa la tua posizione per registrare il percorso.","locationAlwaysAndWhenInUsePermission":"MTB GPS Tracker usa la tua posizione anche in background per continuare la registrazione."}],["@rnmapbox/maps",{"RNMapboxMapsVersion":"11.20.1"}]]
+  "expo": {
+    "name": "MTB GPS Tracker Pro",
+    "slug": "mtb-gps-tracker-pro",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": false,
+      "bundleIdentifier": "it.aquascan.mtbtracker",
+      "infoPlist": {
+        "UIBackgroundModes": ["location"],
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "La posizione serve per registrare la tua attività MTB anche in background.",
+        "NSLocationWhenInUseUsageDescription": "La posizione serve per registrare la tua attività MTB."
+      }
+    },
+    "android": {
+      "package": "it.aquascan.mtbtracker",
+      "permissions": [
+        "ACCESS_COARSE_LOCATION",
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_BACKGROUND_LOCATION",
+        "FOREGROUND_SERVICE",
+        "FOREGROUND_SERVICE_LOCATION"
+      ]
+    },
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationWhenInUsePermission": "MTB GPS Tracker usa la tua posizione per registrare il percorso.",
+          "locationAlwaysAndWhenInUsePermission": "MTB GPS Tracker usa la tua posizione anche in background per continuare la registrazione."
+        }
+      ],
+      [
+        "@rnmapbox/maps",
+        {
+          "RNMapboxMapsVersion": "11.20.1"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "150533b1-5a5f-4596-bdb3-7e56c77d7071"
+      }
+    }
   }
 }

@@ -1,4 +1,5 @@
 
+
 name: Build Android APK
 
 on:
@@ -29,7 +30,15 @@ jobs:
         with:
           eas-version: latest
 
+      - name: Configure Mapbox npm registry
+        env:
+          MAPBOX_DOWNLOADS_TOKEN: ${{ secrets.MAPBOX_DOWNLOADS_TOKEN }}
+        run: |
+          echo "@rnmapbox:registry=https://api.mapbox.com/downloads/v2/npm/" > .npmrc
+          echo "//api.mapbox.com/downloads/v2/npm/:_authToken=${MAPBOX_DOWNLOADS_TOKEN}" >> .npmrc
+
       - name: Build Android APK
         env:
           EXPO_TOKEN: ${{ secrets.EXPO_TOKEN }}
+          MAPBOX_DOWNLOADS_TOKEN: ${{ secrets.MAPBOX_DOWNLOADS_TOKEN }}
         run: eas build --platform android --profile preview --non-interactive --no-wait
